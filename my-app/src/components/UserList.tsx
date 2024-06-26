@@ -53,7 +53,7 @@ const UserList: React.FC = () => {
       const url = new URL('https://65ca334d3b05d29307dfede3.mockapi.io/users/v1/users');
 
       if (query) {
-        url.searchParams.append('search', query);
+        url.searchParams.append('name', query);
       }
 
       url.searchParams.append('page', currentPage.toString());
