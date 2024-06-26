@@ -1,4 +1,3 @@
-// components/ConfirmationDialog.tsx
 import React from 'react';
 import {
   Dialog,
@@ -13,17 +12,19 @@ interface ConfirmationDialogProps {
   open: boolean;
   onClose: () => void;
   userId: string; // Pass userId as prop to identify which user to delete
+  refreshUsers: () => void; // Add refreshUsers prop
 }
 
 const ConfirmationDialog: React.FC<ConfirmationDialogProps> = ({
   open,
   onClose,
   userId,
+  refreshUsers, // Add refreshUsers prop
 }) => {
   const handleConfirmDelete = async () => {
     try {
       await axios.delete(`https://65ca334d3b05d29307dfede3.mockapi.io/users/v1/users/${userId}`);
-      // Handle success (close dialog, update state, etc.)
+      refreshUsers(); // Call refreshUsers to fetch updated user list
       onClose(); // Close the dialog
     } catch (error) {
       console.error('Error deleting user', error);

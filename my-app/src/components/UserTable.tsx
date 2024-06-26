@@ -1,4 +1,3 @@
-// components/UserTable.tsx
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import UserRow from './UserRow';
@@ -6,9 +5,10 @@ import { User } from './type';
 
 interface UserTableProps {
   users: User[];
+  refreshUsers: () => void;
 }
 
-const UserTable: React.FC<UserTableProps> = ({ users }) => {
+const UserTable: React.FC<UserTableProps> = ({ users, refreshUsers }) => {
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -23,7 +23,7 @@ const UserTable: React.FC<UserTableProps> = ({ users }) => {
         </TableHead>
         <TableBody>
           {users.map((user) => (
-            <UserRow key={user.id} user={user} />
+            <UserRow key={user.id} user={user} refreshUsers={refreshUsers} />
           ))}
         </TableBody>
       </Table>

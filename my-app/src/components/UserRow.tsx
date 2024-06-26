@@ -1,4 +1,3 @@
-// components/UserRow.tsx
 import React, { useState } from 'react';
 import { TableCell, TableRow, Button, Grid } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,9 +8,10 @@ import { User } from './type';
 
 interface UserRowProps {
   user: User;
+  refreshUsers: () => void;
 }
 
-const UserRow: React.FC<UserRowProps> = ({ user }) => {
+const UserRow: React.FC<UserRowProps> = ({ user, refreshUsers }) => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editDialogOpen, setEditDialogOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(user);
@@ -66,7 +66,7 @@ const UserRow: React.FC<UserRowProps> = ({ user }) => {
           </Grid>
         </Grid>
       </TableCell>
-      <ConfirmationDialog open={dialogOpen} onClose={handleCloseDialog} userId={currentUser.id} />
+      <ConfirmationDialog open={dialogOpen} onClose={handleCloseDialog} userId={currentUser.id} refreshUsers={refreshUsers} />
       <EditDialog open={editDialogOpen} onClose={handleCloseEditDialog} user={currentUser} onUserUpdated={handleUserUpdated} />
     </TableRow>
   );

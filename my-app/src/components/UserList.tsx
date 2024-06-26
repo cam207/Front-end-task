@@ -1,10 +1,9 @@
-// components/UserList.tsx
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import { Container, Pagination, Typography } from '@mui/material';
 import UserTable from './UserTable';
 import SearchBar from './SearchBar';
-import { User } from './type'; // Import the User interface
+import { User } from './type';
 
 const UserList: React.FC = () => {
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
@@ -84,7 +83,9 @@ const UserList: React.FC = () => {
     fetchData(searchQuery, value);
   };
 
-  
+  const refreshUsers = () => {
+    fetchTotalUsers(searchQuery);
+  };
 
   return (
     <Container>
@@ -99,7 +100,7 @@ const UserList: React.FC = () => {
         </Typography>
       ) : (
         <>
-          <UserTable users={filteredUsers} />
+          <UserTable users={filteredUsers} refreshUsers={refreshUsers} />
           <Pagination
             count={totalPages}
             page={page}
