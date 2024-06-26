@@ -1,4 +1,4 @@
-# Search For a user in an API
+# Search For a user in an API Data
 
 This repository contains the code for a front-end application built using React to fetch users from an API.
 
