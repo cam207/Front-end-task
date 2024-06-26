@@ -20,7 +20,9 @@ To set up the project locally, follow these steps:
 2. **Navigate to the project directory**
   ```bash
    cd Front-end-task/my-app
-3. 
+
+3.
+
 
 
 
