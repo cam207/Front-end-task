@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, Link, Box } from '@mui/material';
+import { Typography, Link, Box, IconButton } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Footer: React.FC = () => {
   return (
@@ -19,7 +20,17 @@ const Footer: React.FC = () => {
           |{" "}
           <Link href="/contact" color="inherit">
             Contact Us
-          </Link>
+          </Link>{" "}
+          |{" "}
+          <IconButton
+            aria-label="GitHub"
+            color="inherit"
+            href="https://github.com/cam207/Front-end-task"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon />
+          </IconButton>
         </Typography>
       </Box>
     </footer>
