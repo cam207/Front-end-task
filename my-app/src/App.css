@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+/* responsive.css */
+@media (max-width: 600px) {
+  .MuiTableCell-root {
+    padding: 8px;
+  }
+
+  .MuiButton-root {
+    font-size: 0.75rem;
+  }
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background-color: #f1f1f1; /* Optional: Add some background color */
+  padding: 10px 0;           /* Optional: Add some padding */
+}
