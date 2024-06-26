@@ -29,10 +29,8 @@ To set up the project locally, follow these steps:
 To run the project locally, follow these steps:
 
 
- 1.**Start the development server**
-```bash
-npm start
-```
+1.**Start the development server**
+
 2. **Open your browser**
    Open your browser and navigate to http://localhost:3000. The application should now be running locally.
    
