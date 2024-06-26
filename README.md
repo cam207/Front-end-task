@@ -33,7 +33,6 @@ To run the project locally, follow these steps:
 ```bash
 npm start
 ```
-
 2. **Open your browser**
    Open your browser and navigate to http://localhost:3000. The application should now be running locally.
    
