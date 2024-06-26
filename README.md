@@ -12,5 +12,9 @@ Before you begin, ensure you have met the following requirements:
 # Installation
 
 To set up the project locally, follow these steps:
-git clone https://github.com/cam207/Front-end-task.git
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/cam207/Front-end-task.git
 
