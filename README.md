@@ -29,7 +29,7 @@ To set up the project locally, follow these steps:
 To run the project locally, follow these steps:
 
 
-1.**Start the development server**
+1. **Start the development server**
 ```bash
 npm start
 ```
