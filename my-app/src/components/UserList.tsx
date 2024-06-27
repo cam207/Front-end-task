@@ -71,6 +71,12 @@ const UserList: React.FC = () => {
 
   return (
     <Container>
+      <Typography variant="h4" align="center" gutterBottom>
+        Welcome to the website
+      </Typography>
+      <Typography variant="h6" align="center" gutterBottom>
+        Find below who you're searching for
+      </Typography>
       <SearchBar
         searchQuery={searchTerm}
         onSearchChange={(e) => setSearchTerm(e.target.value)}
